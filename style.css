@@ -1,0 +1,307 @@
+/* استيراد خط قاهرة المميز وبوردر بوكس */
+@import url('https://googleapis.com');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* تصميم الخلفية المستقبلي */
+body {
+    background-color: #0a0b10;
+    color: #e2e8f0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* تأثير شبكة النيون الخلفية */
+.grid-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 30px 30px;
+    z-index: -1;
+}
+
+/* الهيدر الاحترافي */
+.main-header {
+    background: radial-gradient(circle at top, #1e1b4b 0%, #0a0b10 70%);
+    text-align: center;
+    padding: 60px 20px 40px;
+    border-bottom: 1px solid #1e293b;
+    position: relative;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.2rem;
+    color: #38bdf8;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.logo .badge {
+    background-color: #38bdf8;
+    color: #0a0b10;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    font-weight: 800;
+}
+
+.main-header h1 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 15px;
+    background: linear-gradient(to left, #ffffff, #94a3b8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.main-header p {
+    font-size: 1rem;
+    color: #64748b;
+}
+
+/* حاوي البطاقات */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.download-section {
+    margin-bottom: 60px;
+}
+
+/* العناوين الجانبية للقسم بتأثير النيون */
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    padding-right: 15px;
+}
+
+.title-red {
+    border-right: 4px solid #ef4444;
+    color: #ef4444;
+    text-shadow: 0 0 15px rgba(239, 68, 68, 0.3);
+}
+
+.title-orange {
+    border-right: 4px solid #f59e0b;
+    color: #f59e0b;
+    text-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+}
+
+/* شبكة توزيع الكروت المتجاوبة */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* التصميم الأساسي للكارت */
+.card {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid #1e293b;
+    border-radius: 16px;
+    padding: 30px 25px 25px;
+    position: relative;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    display: flex;
+    flex-direction: column;
+}
+
+/* وسم الحالة أعلى الكارت */
+.card-tag {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 3px 12px;
+    border-radius: 20px;
+}
+
+.tag-red { background-color: #7f1d1d; color: #fca5a5; border: 1px solid #ef4444; }
+.tag-orange { background-color: #78350f; color: #fde68a; border: 1px solid #f59e0b; }
+
+.card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 12px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1; /* جعل التكست يملأ الفراغ لتوحيد الأزرار */
+}
+
+/* ملاحظة كلمة السر الذكية لحماية الرابط وثقة الزائر */
+.password-note {
+    background-color: #0f172a;
+    border: 1px dashed #334155;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.password-note span {
+    color: #38bdf8;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+/* تصميم الأزرار الاحترافي */
+.download-btn {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* ستايل النيون الأحمر */
+.crack-card:hover {
+    transform: translateY(-5px);
+    border-color: #ef4444;
+    box-shadow: 0 10px 30px rgba(239, 68, 68, 0.15);
+}
+
+.btn-red {
+    background: linear-gradient(135deg, #dc2626, #ef4444);
+    color: #ffffff;
+}
+
+.btn-red:hover {
+    background: linear-gradient(135deg, #b91c1c, #dc2626);
+    box-shadow: 0 0 15px rgba(239, 68, 68, 0.4);
+}
+
+/* ستايل النيون البرتقالي */
+.rare-card:hover {
+    transform: translateY(-5px);
+    border-color: #f59e0b;
+    box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15);
+}
+
+.btn-orange {
+    background: linear-gradient(135deg, #d97706, #f59e0b);
+    color: #ffffff;
+}
+
+.btn-orange:hover {
+    background: linear-gradient(135deg, #b45309, #d97706);
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.4);
+}
+
+/* الفوتر */
+.main-footer {
+    background-color: #050508;
+    border-top: 1px solid #1e293b;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #475569;
+}
+
+.main-footer p {
+    max-width: 600px;
+    margin: 0 auto 10px;
+    line-height: 1.5;
+}
+
+.main-footer .copyright {
+    color: #1e293b;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* تعديلات شاشات الموبايل الصغيرة جداً */
+@media (max-width: 480px) {
+    .main-header h1 { font-size: 1.8rem; }
+    .card { padding: 25px 15px; }
+}
+
+/* 🔍 ستايل خانة البحث النيون */
+.search-wrapper {
+    max-width: 500px;
+    margin: 30px auto 0;
+    padding: 0 15px;
+    position: relative;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 14px 25px;
+    background-color: #0f172a;
+    border: 2px solid #1e293b;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    outline: none;
+    text-align: right;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* توهج نيون أزرق عند الضغط على خانة البحث */
+#searchInput:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 15px rgba(56, 189, 248, 0.3);
+    background-color: #1e293b;
+}
+
+/* تغيير لون النص المؤقت */
+#searchInput::placeholder {
+    color: #475569;
+}
+
+
+/* 🖼️ ستايل حاوي الصور الجديد وتنسيق الأيقونات الحقيقية */
+.card-image-wrapper {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px; /* زوايا منحنية متناسقة مع الكارد */
+    padding: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.program-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* يمنع تشوه أبعاد الصورة */
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3)); /* ظل خفيف تحت اللوغو ليبرز */
+}
